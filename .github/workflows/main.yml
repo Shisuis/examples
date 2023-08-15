@@ -1,1 +1,11 @@
 name: goapp
+on: 
+  push:
+    branches: [ master ]
+jobs:
+  code-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: code-checkout
+      
