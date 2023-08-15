@@ -6,7 +6,7 @@ jobs:
   code-checkout:
     runs-on: ubuntu-latest
     steps:
-      - name: code-checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: chode-checkout
         run: |
-          echo "code checkout successfully"
+          echo "code run successfully"
