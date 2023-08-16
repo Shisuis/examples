@@ -18,7 +18,7 @@ jobs:
       - name: Code Build
         run: | 
           echo "Building Code..."
-          docker build -t examples .
+          docker build -t . examples
   Code_push:
     runs-on: ubuntu-latest
     needs: Code_build
@@ -27,7 +27,7 @@ jobs:
       - name: Code Build
         run: | 
           echo "Building Code..."
-          docker build -t examples .
+          docker build -t . examples
           docker tag examples:v2
           docker login -u ${{ secrets.dockeruser }} -p ${{ secrets.dockerpass }}
           docker push examples:v2
