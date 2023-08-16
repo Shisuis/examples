@@ -18,7 +18,7 @@ jobs:
       - name: Code Build
         run: | 
           echo "Building Code..."
-          docker build -t myimage .
+          docker build -t examples .
   Code_push:
     runs-on: ubuntu-latest
     needs: Code_build
